@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
-export const CartContainer = styled.button`
+interface CartButtonProps {
+  $color?: string;
+  $backgroundColor?: string;
+}
+
+export const CartButtonContainer = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,7 +16,7 @@ export const CartContainer = styled.button`
   }
 `;
 
-export const CartIcon = styled.div`
+export const CartButtonIcon = styled.div<CartButtonProps>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -19,6 +24,7 @@ export const CartIcon = styled.div`
   padding: 0.5rem;
   border-radius: 6px;
   font-size: 18px;
-  color: ${({ theme }) => theme.colors.yellowLight};
-  background: ${({ theme }) => theme.colors.yellowDark};
+  color: ${({ theme, $color }) => $color || theme.colors.yellowLight};
+  background: ${({ theme, $backgroundColor }) =>
+    $backgroundColor || theme.colors.yellowDark};
 `;

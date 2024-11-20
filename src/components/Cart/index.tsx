@@ -1,15 +1,21 @@
-import { ShoppingCart } from 'phosphor-react';
+import { ShoppingCart } from "phosphor-react";
 
-import { CartContainer, CartIcon } from './styles';
+import { CartButtonContainer, CartButtonIcon } from "./styles";
 
-const Cart = () => {
+interface CartButtonProps {
+  onClick: () => void;
+  color?: string;
+  backgroundColor?: string;
+}
+
+const CartButton = ({ onClick, color, backgroundColor }: CartButtonProps) => {
   return (
-    <CartContainer>
-      <CartIcon>
+    <CartButtonContainer onClick={onClick}>
+      <CartButtonIcon $color={color} $backgroundColor={backgroundColor}>
         <ShoppingCart size={22} weight="fill" />
-      </CartIcon>
-    </CartContainer>
+      </CartButtonIcon>
+    </CartButtonContainer>
   );
 };
 
-export default Cart;
+export default CartButton;

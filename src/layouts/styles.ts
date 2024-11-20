@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
 export const DefaultLayoutContainer = styled.div`
+  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
+  background: ${({ theme }) => theme.colors.background};
+`;
 
-  margin: 0 auto;
-  padding: 2rem;
-  max-width: 74rem;
-  height: calc(100vh - 10rem);
+export const DefaultLayoutHeaderContainer = styled.div`
+  display: flex;
+  justify-content: center;
 `;

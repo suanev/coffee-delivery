@@ -1,7 +1,8 @@
-import { HeaderContainer, LocationContainer, Nav } from "./styles";
-import logo from "../../assets/logo.svg";
 import { MapPin } from "phosphor-react";
+
+import logo from "../../assets/logo.svg";
 import Cart from "../Cart";
+import { HeaderContainer, LocationContainer, Nav } from "./styles";
 
 const Header = () => {
   return (
